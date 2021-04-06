@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    {% endblock %}
+</head>
+<body>
+<style>
+
+</style>
+
+    <header>
+        <a href="{% url 'Instagram' %}"><i class="fa fa-home"></i></a>
+        <a href="{% url 'Instagram' %}"><i class="fa fa-search"></i></a>
+        <a href="{% url 'new_image' %}"><i class="fa fa-cloud-upload"></i></a>
+        <a href="{% url 'profile' profile_id=user.id%}}"><i class="fa fa-user-o"></i></a>
+    </header>
+
+</body>
+</html>
